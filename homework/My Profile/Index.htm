@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="Garden-19-512.png" type="image/png">
+        <title>HOME | NubletZ.Co</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        @font-face {
+                font-family: "montserrat";
+                src: url('Montserrat-ExtraBoldItalic.otf');
+            }
+        @font-face {
+                font-family: "yikes";
+                src: url('yikes_medium.ttf');
+            }
+        @font-face {
+            font-family: "montserratmed";
+            src: url('Montserrat-mediumitalic.otf');
+        }
+        html {
+            scroll-behavior: smooth;
+            overflow: hidden;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y:auto;
+            transform-style: preserve-3d;
+            height: 100vh;
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+        .parallax1 {
+            width : 100vw;
+            height: 100vh;
+            padding-top:20vh;
+            transform-style: preserve-3d;
+            box-sizing: border-box;
+        }
+        .parallax1::before {
+            content:"";
+            background-image: url('source/Cover2.png');
+            background-repeat: no-repeat;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 20vh;
+            left: 0;
+            z-index: -1;
+            transform:translateZ(-1px) scale(2.4);
+        }
+        .div2 {
+            background-color:rgba(0,2,19,1);
+            color: #ffffff;
+            font-family: yikes;
+            padding-top: 10vh;
+            margin : 0;
+            left : 0;
+            width: 100vw;
+            z-index: 2;
+            position: relative;
+            /* flexible setting */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .headDiv {
+            text-align: center; 
+            font-family: yikes;
+            color: #ffffff;
+            position: absolute; 
+            top: 8vh; 
+            left: 25vw; 
+            right: 25vw; 
+            margin:0; 
+            padding: 0
+            li
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #ff687b;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
+            font-family: "montserrat";
+        }
+        li a:hover {
+            background-color: #fe8069;
+        }
+        .divleft {
+            left: 6vw;
+            width: auto;
+            /* max-width: 550px;
+            min-width: 390px; */
+            font-family: yikes;
+            font-size: 16px;
+            color: #ffffff;
+            position: relative;
+            float: left;
+            width: 50%;
+            min-width: 450px
+        }
+        .divright {
+            right: 3vw;
+            left: 6vw;
+            width: auto;
+            max-width: 550px;
+            min-width: 390px;
+            font-family: montserrat;
+            font-size: 12px;
+            color: #ffffff;
+            position: relative;
+            float: left;
+        }
+        
+    </style>
+    <body>
+    <!-- PART 1 Menu using list -->
+        <ul>
+            <li><a href="https://www.facebook.com/wimayanitya.pandita" target="_blank"><img src="source/iconfb2.png" style="width:38px; height: 38px"></a></li>
+            <li><a href="https://www.instagram.com/thekunils.30" target="_blank"><img src="source/iconig.png" style="width:38px; height: 38px"></a></li>
+            <li><a href="https://github.com/NubletZ" target="_blank"><img src="source/icongit.png" style="width:38px; height: 38px"></a></li>
+        </ul>
+
+    <!-- PART 2 Opening, Particlejs and Parallax section -->
+        <div class="parallax1">
+            <div id="particles-js" style="position: relative;">
+                <script src="particles.js-master/particles.js"></script>
+                <script src="Particle-js.js"></script>
+                <div class="headDiv">
+                    <img src="source/ProfilPic.png" alt="Author profile picture" style="width: 150px; height: 150px">
+                    <h1 style="font-size: 30px">
+                        <b>Wimaya Nitya Phandita</b><br/>
+                        <span style="font-size: 18px">wpandita2001@gmail.com</span>
+                    </h1>
+                    <p style="font-size: 18px; margin: 0; padding: 0">
+                        A bachelor student in National Quemoy University, Taiwan <br/>
+                        Majoring in Computer Science and Information Engineering <br/>
+                        Interested in graphic design <br/>
+                        <span style="font-size: 1px"></span><br/>
+                        -110810538-
+                    </p>
+                </div>
+            </div> 
+        </div>
+
+    <!-- PART 3 Content -->
+        <div class="div2">
+            <!-- Division Left -->
+            <div class="divleft">
+                <div style="max-width: 570px; min-width: 390px">
+                    <img src="source/Profile.png" alt="Profile" style="height: 35px; width: auto"> <br/> <br/>
+                    <p style="text-align: center"><img src="source/indomap.png" alt="Indonesian map" style="height: auto; width: 90%"></p>
+                    <p style="text-align: center; padding-right: 40px; padding-left: 40px">
+                        She was born in Central Java, Indonesia. She is a responsible, hard 
+                        worker and dependable girl. In 2019 she went to Taiwan to continue 
+                        her study. She took Computer Science and Information Engineering as 
+                        her bachelor degree. By learning abroad she want to build a good 
+                        relation with local and non local people.
+                    </p>
+                    <br/><br/>
+                    <img src="source/Experience.png" alt="Experience" style="height:35px; width: auto"> <br/><br/><br/>
+                    <picture>
+                        <source srcset="source/small_timeline_experience.png" alt="timeline" media="(max-width: 950px)" style="width: 90%">
+                        <img src="source/big_timeline_experience.png" alt="timeline" style="width: 90%">
+                    </picture>
+                    <br/><br/><br/>
+                </div>
+            </div>
+            <!-- Division Right -->
+            <div class="divright">
+                <img src="source/Skills.png" alt="Skills" style="height: 35px; width: auto"> <br/><br/>
+                <img src="source/Editing.png" alt="Editing" style="height: 23px; width: auto; padding-left: 40px">
+                <div style="max-width:450px; width: auto; position: relative; left: 50px">
+                    <div style="width: 100px; position: relative; text-align: center; float: left">
+                        <style>
+                            p{
+                                padding-right: 25px
+                            }
+                        </style>
+                        <p>PowerPoint</p>
+                        <p>Photoshop</p>
+                        <p>Flash</p>
+                    </div>
+                    <div style="width: auto; right: 5vw; padding: 8px">
+                        <img src="source/powerpoint.png" alt="100%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/photoshop.png" alt="80%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/flash.png" alt="40%" style="height: 9px; width: auto; padding: 8px">
+                    </div>
+                </div>
+                <br/>
+                <img src="source/Programming.png" alt="Programming" style="height: 23px; width: auto; padding-left: 40px">
+                <div style="max-width:450px; width: auto; position: relative; left: 50px">
+                    <div style="width: 100px; position: relative; text-align: center; float: left">
+                        <style>
+                            p{
+                                padding-right: 25px
+                            }
+                        </style>
+                        <p>C</p>
+                        <p>C#</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+                    <div style="width: auto; right: 5vw; padding: 3px">
+                        <img src="source/C.png" alt="90%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/Csharp.png" alt="35%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/HTML.png" alt="35%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/CSS.png" alt="20%" style="height: 9px; width: auto; padding: 8px">
+                    </div>
+                </div>
+                <br/>
+                <img src="source/Language.png" alt="Programming" style="height: 23px; width: auto; padding-left: 40px">
+                <div style="max-width:450px; width: auto; position: relative; left: 50px">
+                    <div style="width: 100px; position: relative; text-align: center; float: left">
+                        <style>
+                            p{
+                                padding-right: 25px
+                            }
+                        </style>
+                        <p>Indonesian</p>
+                        <p>English</p>
+                        <p>Chinese</p>
+                        <p>Russian</p>
+                    </div>
+                    <div style="width: auto; right: 5vw; padding: 3px">
+                        <img src="source/Indonesian.png" alt="100%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/English.png" alt="85%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/Chinese.png" alt="35%" style="height: 9px; width: auto; padding: 8px">
+                        <img src="source/Russian.png" alt="10%" style="height: 9px; width: auto; padding: 8px">
+                    </div>
+                </div>
+                <br/><br/>
+                <img src="source/Interests.png" alt="Interests" style="height: 35px; width: auto"> <br/> <br/>
+                <div style="padding-left: 30px">
+                    <img src="source/intsleep.png" alt="sleep" title="睡覺" style="height: 50px; width: auto; float:left; padding-left: 7px">
+                    <img src="source/inteat.png" alt="eat" title="吃東西" style="height: 50px; width: auto; float:left; padding-left: 7px">
+                    <img src="source/intplaygame.png" alt="play game" title="玩游戲" style="height: 50px; width: auto; float:left; padding-left: 7px">
+                    <img src="source/intmusic.png" alt="listen to music" title="聼音樂" style="height: 50px; width: auto; float:left; padding-left: 7px; padding-bottom: 5vh">
+                </div>
+            </div>          
+        </div>
+    </body>
+</html>
