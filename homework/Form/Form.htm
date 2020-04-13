@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="../My Profile/Garden-19-512.png" type="image/png">
+            <title>FORM | NubletZ.Co</title>
+            <meta charset="UTF-8">
+    </head>
+    <style>
+    @font-face {
+        font-family: "microsoftyahei";
+        src: url('msyh.ttc');
+    }
+    
+    @font-face {
+        font-family: "twcent";
+        src: url('TCCM____.TTF');
+    }
+
+    body {
+        background-image: url('source/back bg.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    p {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .middlediv {
+        text-align: center;
+        z-index: 1;
+        position: relative;
+    }
+
+    .frontbg {
+        background-image: url('source/front bg.png');
+        background-attachment: fixed;
+        background-size: cover;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .form {
+        text-align: center;
+        z-index: 3;
+        position: relative;
+        top: 25px;
+        padding: 0;
+        width: 450px;
+        display: inline-block;
+    }
+
+    label {
+        color: rgb(165,91,91);
+        font-size: 18px;
+        font-family: microsoftyahei;
+    }
+
+    input, select, textarea {
+        background-color: rgb(242, 179, 140);
+        font-size: 15px;
+        font-family: microsoftyahei;
+        color: rgb(255,229,221);
+        font-weight: bold;
+        border-width: 0px 0px 4px 2px;
+        border-color: rgb(237,156,125);
+        border-style: solid;
+        border-radius: 5px;
+        margin-bottom: 14px;
+    }
+
+    option {
+        font-size: 14px;
+        font-family: microsoftyahei;
+        color: rgb(233,133,93);
+        font-weight: bold;
+    }
+
+    .inptext {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 1px;
+        padding-bottom: 3px;
+    }
+    
+    textarea {
+        width: 227px; 
+        height: 74px; 
+        min-height: 26px; 
+        max-height:88px; 
+        max-width: 333px; 
+        min-width: 164px;
+        margin-top: 10px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+        background-color: rgb(245,194,155);
+        border-width: 0px 0px 4px 2px;
+        border-color: rgb(238,177,131);
+        border-style: solid;
+        color: rgb(233,133,93);
+    }
+
+    .spanstyle{
+        font-size: 22px; 
+        font-family: twcent;
+    }
+
+    .container {
+        height: 318px;
+        overflow: hidden;
+    }
+
+    button {
+        border-radius: 5px;
+        padding: 7px 14px 7px 14px;
+        background-color: rgb(231,125,125);
+        border-color: rgb(236,166,152);
+        font-family: twcent;
+        font-weight: bold;
+        font-size: 16px;
+        color: rgb(255,229,221);
+    }
+
+    button:hover {
+        background-color: rgb(253,121,111);
+    }
+
+    button:focus {
+        background-color: rgb(246,102,102);
+    }
+
+    </style>
+    <body>
+        <div class="middlediv">
+            <image src="source/lable.png" style="width: 700px"></image>
+        </div>
+        <div class="frontbg"style="text-align: center">
+            <div class="form">
+                <p>
+                    <b style="font-size: 32px; font-family: microsoftyahei; color: rgba(234,168,118,1)">個人資料</b><br/>
+                    <span style="font-size: 23px; font-family: twcent; color: rgba(239,190,153,1)"><b>PERSONAL DATA</b></span>
+                </p>
+                <br><br>
+                <form>
+                    <div class="container">
+                        <div style="width: 30%; float:left; text-align: left; padding-left:5%; padding-right:5%; position: relative">
+                            <label for="username">
+                                <b>
+                                    姓名 /
+                                    <span class="spanstyle">Name</span>
+                                </b>
+                            </label><br><br>
+                            <label for="department">
+                                <b>
+                                    科系 /
+                                    <span class="spanstyle">Department</span>
+                                </b>
+                            </label><br><br>
+                            <label for="Hobby">
+                                <b>
+                                    興趣 /
+                                    <span class="spanstyle">Hobby</span>
+                                </b>
+                            </label><br><br>
+                            <label for="bloodtype">
+                                <b>
+                                    血型 /
+                                    <span class="spanstyle">Blood type</span>
+                                </b>
+                            </label><br><br>
+                            <label for="birthdate">
+                                <b>
+                                    生日 /
+                                    <span class="spanstyle">Birth date</span>
+                                </b>
+                            </label><br><br>
+                            <label for="password">
+                                <b>
+                                    密碼 /
+                                    <span class="spanstyle">Password</span>
+                                </b>
+                            </label><br><br>
+                            <label for="confpass">
+                                <b>
+                                    碼認 /
+                                    <br>
+                                    <span class="spanstyle">Confirm Password</span>
+                                </b>
+                            </label>
+                        </div>
+                        <div style="width: 60%; float:right; text-align:left">
+                            <input type="text" class="inptext" id="username" name="username"><br>
+                            <input type="text" class="inptext" id="department" name="department"><br>
+                            <input type="text" onfocus="this.value=''" value="e.x. sleeping, sleeping" class="inptext" id="Hobby" name="Hobby"><br>
+                            <select id="bloodtype" name="bloodtype" class="inptext">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="AB">AB</option>
+                                <option value="O">O</option>
+                            </select><br>
+                            <input type="date" class="inptext" id="birthdate" name="birthdate"><br>
+                            <input type="password" class="inptext" id="password" name="password"><br>
+                            <input type="password" class="inptext" id="confpass" name="confpass" style="margin-top: 15px"><br>
+                        </div>
+                    </div>
+                    <div style="text-align:left; margin-left:5%">
+                        <label for="comment">
+                            <b style="text-align: left">
+                                留言 /
+                                <span class="spanstyle">Leave a comment</span>
+                            </b>
+                        </label><br>
+                        <textarea id="comment" name="comment"  onfocus="this.value=''" style="padding-left:5px; padding-right:5px">Moshi moshi.. (p^-^)p</textarea><br>
+                        <button>SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
