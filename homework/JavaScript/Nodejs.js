@@ -30,7 +30,7 @@ rl.question("smallest number :", function(min)
     rl.question("biggest number :", function(max) 
     {
         console.log("list of prime number from", min, "to", max, ":");
-        prime = 1, count = 0;
+        prime = 1, count = 0, total = 0;
         for(i=parseInt(min); i <= parseInt(max); i++)
         {
             for(j=1; j <= i/2; j++)
@@ -38,9 +38,14 @@ rl.question("smallest number :", function(min)
                 count = i%j;
                 if(count == 0) prime++;
             }
-            if(prime <= 2 && i > 1) console.log(i);
+            if(prime <= 2 && i > 1) 
+            {
+                console.log(i);
+                total++;
+            }
             prime = 1;
         }
+        console.log("countPrime(%d, %d) => %d", min, max, total);
         rl.close();
     });
 });
