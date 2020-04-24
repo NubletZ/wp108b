@@ -1,6 +1,7 @@
 LOREM IPSUM
 =======
 This is markdown
+
 Try bullet list:
   * Test1
   * Test2
@@ -12,7 +13,8 @@ Try number list:
   3. Test3
   
 [Visit this link!](https://nubletz.github.io/wp108b/homework/My%20Profile/Index.htm)
-![Photo](../My Profile/source/ProfilPic.png)
+
+![Photo](https://github.com/NubletZ/wp108b/blob/master/homework/My%20Profile/source/ProfilPic.png)
 > Cool chicken
 
 Table
