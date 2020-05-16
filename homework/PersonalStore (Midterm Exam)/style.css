@@ -1,0 +1,382 @@
+/* BACKGROUND STYLE*/
+/* Index */
+body {
+    margin: 0;
+    padding: 0;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.bg1 {
+    background-image: url('resource/bgshop.png');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/* Home */
+.bgHome {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 221, 140);
+    text-align: center;
+}
+/* FONT */
+@font-face {
+    font-family: "yikes";
+    src: url('Yikes_medium.ttf');
+}
+
+@font-face {
+    font-family: "microsoftyahei";
+    src: url('../Form/msyh.ttc');
+}
+
+/* INDEX CONTENT */
+.container {
+    position: relative;
+    text-align: center;
+    width: 650px;
+    height: 700px;
+    display: inline-block;
+    padding: 0;
+}
+.labelPic {
+    /* width: 650px; */
+    position: relative;
+    margin-top: 5vh;
+    z-index: -1;
+}
+
+.divform {
+    position: absolute;
+    top: 21vh;
+    text-align: center;
+    font-family: yikes;
+    width: 100%;
+}
+
+form {
+    width: 380px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 35px;
+    color: rgb(234, 168, 118);
+}
+
+.input {
+    background-color: rgb(242, 179, 140);
+    font-size: 15px;
+    font-family: microsoftyahei;
+    color: rgb(255,229,221);
+    font-weight: bold;
+    border-width: 0px 0px 4px 2px;
+    border-color: rgb(237,156,125);
+    border-style: solid;
+    border-radius: 5px;
+    margin-top: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    width: 210px;
+}
+
+.input:focus {
+    background-color: rgb(245,194,155);
+    border-width: 0px 0px 4px 2px;
+    border-color: rgb(238,177,131);
+    border-style: solid;
+    color: rgb(233,133,93);
+}
+
+.leftDiv {
+    float: left;
+    width: 30%;
+    font-size: 20px;
+    text-align: left;
+    color: rgb(165,91,91);
+    height: 182px;
+}
+
+.rightDiv {
+    float: right;
+    width: 65%;
+    text-align: left;
+    padding-top: 2px;
+    height: 180px;
+}
+
+#nb {
+    font-size: 13px;
+    color: rgb(203, 130, 112);
+    margin: 0;
+    padding-top: 3px;
+}
+
+#notify {
+    font-size: 14px;
+    color: rgb(165,91,91);
+}
+
+.button {
+    border-radius: 5px;
+    padding: 7px 14px 7px 14px;
+    background-color: rgb(231,125,125);
+    border-color: rgb(236,166,152);
+    font-family: yikes;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgb(255,229,221);
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: rgb(253,121,111);
+}
+
+.button:focus {
+    background-color: rgb(246,102,102);
+}
+
+.memoire {
+    height: 180px;
+    width: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+/* HOME CONTENT */
+.bgPic {
+    width: 100%;
+    height: auto;
+}
+
+.bgSmoke {
+    padding-top: 200px;
+    opacity: 0.7;
+}
+
+.bgEnd {
+    padding-top: 50px;
+    position: relative;
+    bottom: -100px;
+}
+
+.fixNav {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.Menu {
+    font-family: yikes;
+    cursor: pointer;
+    color: rgb(254, 238, 226);
+    border: none;
+    background-color: rgb(0,0,0,0);
+    z-index: 3;
+    padding-right: 12px;
+    padding-left: 8px;
+}
+
+.barMenu {
+    font-size: 30px;
+    float: left;
+}
+
+.faqMenu {
+    font-size: 28px;
+    float: right;
+    padding-top: 12px;
+    text-decoration: none;
+}
+
+.leftMenu {
+    position: absolute;
+    width: 20%;
+    min-width: 300px;
+    height: 100%;
+    background-color: rgb(252, 189, 140);
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: right;
+}
+
+.rightMenu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0 , 0, 0.5);
+}
+
+.menuButton {
+    font-family: yikes;
+    font-size: 25px;
+    color: rgb(254, 238, 226);
+    padding: 12px 8px 12px 8px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buttonBorder {
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    border-color: rgb(254, 238, 226, 0.5);
+}
+
+.menuButton:hover {
+    background-color: rgb(253, 157, 119);
+}
+
+#xButton {
+    margin-right: 15px;
+    font-family: yikes;
+    font-size: 30px;
+    color: rgb(254, 238, 226);
+    padding: 0px 8px 8px 8px;
+    text-decoration: none;
+}
+
+#sideMenu {
+    top: 0;
+    width: 0;
+    position: fixed;
+    overflow: hidden;
+}
+
+.content {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.authorPic {
+    height: 200px;
+    width: auto;
+    float: left;
+    padding-right: 20px
+}
+
+.helloText {
+    max-width: 850px;
+    min-width: 650px;
+    text-align: left;
+    display: inline-block;
+    font-size: 23px;
+    font-family: yikes;
+    color: rgb(246, 146, 84);
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+
+.helloText p {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    background-color: rgb(244, 179, 121);
+    border: none;
+    width: 350px;
+    font-family: yikes;
+    color: rgb(255, 251, 205);
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+fieldset legend {
+    background-color: rgb(250, 140, 99);
+    padding: 10px 25px 7px 25px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+fieldset p {
+    font-size: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.container2 {
+    flex-wrap: wrap;
+    text-align: center;
+    overflow: hidden;
+}
+
+.homeContainer {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.newproductDiv {
+    flex-wrap: wrap;
+    color: rgb(250, 140, 99);
+    font-family: yikes;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.imageNP {
+    height: 210px;
+    width: auto;
+    padding-right: 10px;
+}
+.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: auto;
+    z-index: 2;
+    position: relative;
+    bottom: 100px;
+    display: inline-block;
+}
+
+.li {
+    float: left;
+    background-color: rgb(245, 167, 109);
+    border-radius: 20px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 5px 2px 5px;
+    text-decoration: none;
+    font-family: "montserrat";
+}
+
+.li:hover {
+    background-color: rgb(242, 138, 106);
+}
+
+.liPic {
+    width: 20px;
+    height: 20px;
+}

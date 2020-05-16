@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOGIN | Nubletz Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="myjs.js"></script>
+    </head>
+    <body class="bg1">
+        <div class="container">
+            <div class="labelPic"><img src="resource/loginlabel.png" style="width: 650px" alt="Back label"></div>
+            <div class="divform">
+                <p class="title">- LOGIN -</p>
+                <form id="form1">
+                    <div class="leftDiv">
+                        <br>
+                        <label for="nickname" class="labelIndx" id="nickname"><b>Nickname</b></label><br><br>
+                        <label for="email" class="labelIndx"><b>Email</b></label><br><br>
+                        <label for="pass" class="labelIndx"><b>Password</b></label><br>
+                    </div>
+                    <div class="rightDiv">
+                        <input type="text" id="nickname" name="nickname" class="input">
+                        <input type="email" id="email" name="email" class="input">
+                        <input type="password" id="pass" name="pass" class="input">
+                        <p id="nb"><b>* guest password = 123</b></p><br>
+                        <input type="checkbox" id="send email" name="send email" value="agree">
+                        <label for="send email" id="notify"><b>Send me notifications by email</b></label>
+                        
+                    </div>
+                    <input type="button" class="button" onclick="myFunction()" value="SUBMIT">
+                </form>
+                <!-- <p id="demo">test</p>
+                <p id="demo2"></p>
+                <p id="demo3"></p> -->
+            </div>  
+        </div>
+        <img src="resource/memoire.png" class="memoire" alt="Jardin de la Memoire">
+    </body>
+</html>
