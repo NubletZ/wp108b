@@ -179,6 +179,11 @@ form {
     z-index: 2;
 }
 
+.homemainPic {
+    width:95vw;
+    right:20px;
+}
+
 .Menu {
     font-family: yikes;
     cursor: pointer;
@@ -275,7 +280,6 @@ form {
 
 .helloText {
     max-width: 850px;
-    min-width: 650px;
     text-align: left;
     display: inline-block;
     font-size: 23px;
@@ -299,7 +303,6 @@ fieldset {
     border-radius: 30px;
     display: inline-block;
     margin-right: 50px;
-    margin-left: 50px;
 }
 
 fieldset legend {
@@ -334,7 +337,6 @@ fieldset p {
     font-size: 25px;
     font-weight: bold;
     display: inline-block;
-    margin-right: 50px;
     margin-left: 50px;
 }
 
@@ -379,4 +381,28 @@ fieldset p {
 .liPic {
     width: 20px;
     height: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .testing {
+        width: 100vw;
+        display: inline-block;
+        text-align: center;
+    }
+    .authorPic {
+        display: inline-block;
+        float: none;
+    }
+    .helloText {
+        text-align: center;
+    }
+    fieldset {
+        margin: 0px;
+    }
+    .newproductDiv {
+        margin: 0px;
+    }
+    .homemainPic {
+        scale: 1.5;
+    }
 }
