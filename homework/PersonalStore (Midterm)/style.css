@@ -82,13 +82,10 @@ form {
 }
 
 .input, .select {
-    background-color: rgb(242, 179, 140);
     font-size: 15px;
     font-family: microsoftyahei;
-    color: rgb(255,229,221);
     font-weight: bold;
     border-width: 0px 0px 4px 2px;
-    border-color: rgb(237,156,125);
     border-style: solid;
     border-radius: 5px;
     padding-left: 10px;
@@ -100,9 +97,18 @@ form {
 .input {
     width: 210px;
     margin-top: 13px;
+    background-color: rgb(242, 179, 140);
+    color: rgb(255,229,221);
+    border-color: rgb(237,156,125);
 }
 
-.input:focus, .select:hover {
+.select {
+    background-color: rgb(245,194,155);
+    border-color: rgb(238,177,131);
+    color: rgb(233,133,93);
+}
+
+.input:focus {
     background-color: rgb(245,194,155);
     border-width: 0px 0px 4px 2px;
     border-color: rgb(238,177,131);
@@ -511,12 +517,16 @@ fieldset p {
 }
 
 /* Product Desc */
-.container4 {
+.wrapper {
     width: 100%;
-    padding-left: 15%;
-    padding-right: 50px;
-    padding-top: 150px;
+    height: 100%;
+    text-align: center;
+}
+.container4 {
+    flex-wrap: wrap;
+    margin-top: 120px;
     text-align: left;
+    display: inline-block;
 } 
 
 .text {
@@ -530,6 +540,7 @@ fieldset p {
 
 .description {
     font-size: 18px;
+    margin-left: 50px;
 }
 
 .title {
@@ -540,8 +551,29 @@ fieldset p {
 
 .descImg {
     float: left;
-    margin: 30px;
+    margin-top: 20px;
+    padding: 10px;
     width: 350px;
+    background-color: bisque;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgb(248, 131, 104);
+}
+
+.button2 {
+    border-radius: 5px;
+    border: none;
+    padding: 7px 14px 7px 14px;
+    background-color: rgb(252, 189,140);
+    font-family: yikes;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(242, 138, 106);
+    margin-top: 10px;
+}
+
+.button2:hover {
+    color: rgb(252, 189,140);
+    background-color: rgb(242, 138, 106);
 }
 
 @media only screen and (max-width: 700px){
@@ -550,7 +582,7 @@ fieldset p {
         padding-right: 30px;
         padding-top: 100px;
     }
-    .descImg {
+    .description, .descImg {
         margin: 0;
     }
 }
