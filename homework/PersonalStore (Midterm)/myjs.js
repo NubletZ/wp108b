@@ -5,15 +5,27 @@ function myFunction(){
     var usrname = x.elements[0].value; //store the value of username
     var email = x.elements[1].value; //store the value of email
     var pass = x.elements[2].value; //store the value of password
+    var message = "";
     // document.getElementById("demo").innerHTML = usrname;
     // document.getElementById("demo2").innerHTML = email;
     // document.getElementById("demo3").innerHTML = pass;
     // document.getElementById("demo3").value.length = getElementById("nickname").value.length;
-    if(x.elements[0].value.length > 0){
+    if(pass == 123 && x.elements[0].value.length > 0){
         localStorage.setItem('usrname', usrname);
         location.href = 'home.html';
     }
-    else alert('Please fill in the nickname so we know how to call you')
+    else if(pass != 123 && x.elements[0].value.length > 0){
+        alert("Are you a guest? fill in the password by 123");
+        document.getElementById('pass').focus();
+    }
+    else if(x.elements[0].value.length <= 0 && pass == 123){
+        alert("Please fill in your nickname so we know how to call you");
+        document.getElementById('nickname1').focus();
+    }
+    else{
+        alert("Please make sure that you've filled in your nickname and password correctly");
+        document.getElementById('nickname1').focus();
+    } 
 }
 
 // Function to show hello alert in Home
@@ -31,4 +43,16 @@ function openMenu(){
 function closeMenu(){
     document.getElementById("sideMenu").style.width = "0vw";
     document.getElementById("sideMenu").style.height = "0vh";
+}
+
+//FOR PRODUCTDESC.HTML
+function loadFunction(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const page_type = urlParams.get('myProduct')
+    //set title and image
+    if(page_type == 1) {
+        document.getElementById('productTitle').innerHTML = "•FRUIT SOUP GIRL•";
+        document.getElementById('productImg').src = "resource/p yinni.png";
+    }
 }

@@ -1,5 +1,11 @@
+/* ANIMATION */
+
+html {
+    scroll-behavior: smooth;
+  }
+
 /* BACKGROUND STYLE*/
-/* Index */
+
 body {
     margin: 0;
     padding: 0;
@@ -9,12 +15,16 @@ body {
     overflow-x: hidden;
 }
 
+/* Index, Product */
+
 .bg1 {
     background-image: url('resource/bgshop.png');
     background-size: cover;
     background-attachment: fixed;
+    background-color: rgb(249, 159, 141);
     text-align: center;
     flex-wrap: wrap;
+    background-repeat: no-repeat;
 }
 
 /* Home */
@@ -71,7 +81,7 @@ form {
     color: rgb(234, 168, 118);
 }
 
-.input {
+.input, .select {
     background-color: rgb(242, 179, 140);
     font-size: 15px;
     font-family: microsoftyahei;
@@ -81,15 +91,18 @@ form {
     border-color: rgb(237,156,125);
     border-style: solid;
     border-radius: 5px;
-    margin-top: 13px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 3px;
-    width: 210px;
 }
 
-.input:focus {
+.input {
+    width: 210px;
+    margin-top: 13px;
+}
+
+.input:focus, .select:hover {
     background-color: rgb(245,194,155);
     border-width: 0px 0px 4px 2px;
     border-color: rgb(238,177,131);
@@ -152,6 +165,12 @@ form {
     position: absolute;
     bottom: 10px;
     left: 0;
+}
+
+@media only screen and (max-width: 700px){
+    .memoire {
+        height: 80px;
+    }
 }
 
 /* HOME CONTENT */
@@ -383,6 +402,16 @@ fieldset p {
     height: 20px;
 }
 
+.gotoTop {
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 700px) {
     .testing {
         width: 100vw;
@@ -404,5 +433,124 @@ fieldset p {
     }
     .homemainPic {
         scale: 1.5;
+    }
+}
+
+/* Product */
+
+.divforTitle {
+    width: 100%;
+    text-align: center;
+}
+.shopTitle {
+    height: 140px;
+    width: auto;
+    display: inline-block;
+}
+
+.fixed {
+    position: fixed;
+    overflow: hidden;
+}
+
+.container3 {
+    width: 100%;
+    height: 75vh;
+    flex-wrap: wrap;
+    left: 0px;
+    right: 50px;
+    top: 180px;
+    position: relative;
+    overflow: hidden;
+    border-top: solid rgb(242, 138, 106, 0.5);
+    border-width: 3px 0px 0px 0px;
+}
+
+.iframeProduct{
+    background-color: transparent;
+    padding-bottom: 200px;
+    padding-left: 50px;
+}
+
+.iframeProduct a{
+    text-decoration: none;
+}
+
+.productPic {
+    width: 250px;
+    padding: 10px;
+}
+
+.imgtxtDiv:hover div {
+    visibility: visible;
+}
+
+.imgtxtDiv:hover img {
+    filter: brightness(50%);
+    background-color: rgb(254, 219, 172);
+    cursor: pointer;
+}
+
+.imgtxtDiv {
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    display: inline-block;
+}
+
+.imgtxtDiv div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    color: white;
+    font-family: yikes;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgb(163,61,59);
+}
+
+/* Product Desc */
+.container4 {
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 50px;
+    padding-top: 150px;
+    text-align: left;
+} 
+
+.text {
+    font-family: yikes;
+    color: rgb(255, 242, 204);
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    max-width: 600px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 38px;
+    text-shadow: 2px 3px rgb(248, 131, 104);
+}
+
+.descImg {
+    float: left;
+    margin: 30px;
+    width: 350px;
+}
+
+@media only screen and (max-width: 700px){
+    .container4 {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 100px;
+    }
+    .descImg {
+        margin: 0;
     }
 }
