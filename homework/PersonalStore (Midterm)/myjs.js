@@ -123,7 +123,7 @@ p[6] = localStorage.getItem('LiBo');
 function cartFunction(){
     var j = 0;
     for(var i = 0; i < 7; i++){
-        if(p[i] != 0){
+        if(p[i] != 0 && p[i] != null){
             newRow(i);
             document.getElementById("xButton"+i).innerHTML = "<a href='javascript:void(0)' onclick='deleteCart("+i+")'>x</a>"
             document.getElementById("pBitmap"+i).innerHTML = "Picture" + i;
