@@ -596,4 +596,7 @@ fieldset p {
     .description, .descImg {
         margin: 0;
     }
+    .shopTitle {
+        margin-top: 25px
+    }
 }
