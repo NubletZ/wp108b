@@ -1,3 +1,13 @@
+function startData(){
+    localStorage.setItem('FruSo', 0);
+    localStorage.setItem('LoDo', 0);
+    localStorage.setItem('CriVe', 0);
+    localStorage.setItem('BuCa', 0);
+    localStorage.setItem('AnVe', 0);
+    localStorage.setItem('CuPe', 0);
+    localStorage.setItem('LiBo', 0);
+}
+
 // Function to save the data from index.html form
 function myFunction(){
     
@@ -123,13 +133,13 @@ p[6] = localStorage.getItem('LiBo');
 function cartFunction(){
     var j = 0;
     for(var i = 0; i < 7; i++){
-        if(p[i] != 0 && p[i] != null){
+        if(p[i] != 0){
             newRow(i);
             document.getElementById("xButton"+i).innerHTML = "<a href='javascript:void(0)' onclick='deleteCart("+i+")'>x</a>"
             document.getElementById("pBitmap"+i).innerHTML = "Picture" + i;
             document.getElementById("pName"+i).innerHTML = "Name" + i;
             document.getElementById("pPrice"+i).innerHTML = "Price" + i;
-            document.getElementById("pQuantity"+i).innerHTML = "Quantity" + i;
+            document.getElementById("pQuantity"+i).innerHTML = p[i];
             // j++;
         }
     }
@@ -152,11 +162,11 @@ function deleteCart(i){
 }
 
 function rewriteData(){
-    localStorage.setItem('FruSo', p[0]);
-    localStorage.setItem('LoDo', p[1]);
-    localStorage.setItem('CriVe', p[2]);
-    localStorage.setItem('BuCa', p[3]);
-    localStorage.setItem('AnVe', p[4]);
-    localStorage.setItem('CuPe', p[5]);
-    localStorage.setItem('LiBo', p[6]);
+    localStorage.setItem('FruSo',p[0]);
+    localStorage.setItem('LoDo',p[1]);
+    localStorage.setItem('CriVe',p[2]);
+    localStorage.setItem('BuCa',p[3]);
+    localStorage.setItem('AnVe',p[4]);
+    localStorage.setItem('CuPe',p[5]);
+    localStorage.setItem('LiBo',p[6]);
 }
