@@ -66,10 +66,12 @@ body {
 
 .divform {
     position: absolute;
-    top: 21vh;
+    margin-top: 5vh;
+    padding-top: 125px;
     text-align: center;
     font-family: yikes;
     width: 100%;
+    z-index: 1;
 }
 
 form {
@@ -177,6 +179,12 @@ form {
 @media only screen and (max-width: 700px){
     .memoire {
         height: 80px;
+    }
+}
+
+@media only screen and (max-height: 600px){
+    .memoire {
+        visibility: hidden;
     }
 }
 
