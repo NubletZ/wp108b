@@ -466,7 +466,7 @@ fieldset p {
         display: inline-block;
         float: none;
     }
-    .helloText {
+    .helloText, .faqText {
         text-align: center;
     }
     fieldset {
@@ -744,10 +744,20 @@ td {
     height: 200px;
 }
 
+@media only screen and (max-width: 700px) {
+    .memoireAbout {
+        padding-top: 50px;
+        height: 130px;
+    }
+    .textAbout {
+        max-width: 100px;
+    }
+}
+
 .textAbout {
     font-family: yikes;
     color: rgb(255, 242, 204);
-    padding: 0;
+    padding: 10px;
     margin: 0;
     display: inline-block;
     max-width: 700px;
