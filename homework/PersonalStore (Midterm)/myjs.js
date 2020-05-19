@@ -55,7 +55,7 @@ function openMenu(){
 
 function closeMenu(){
     document.getElementById("sideMenu").style.width = "0vw";
-    document.getElementById("sideMenu").style.height = "0vh";
+    document.getElementById("sideMenu").style.height = "100vh";
 }
 
 //FOR PRODUCTDESC.HTML
@@ -135,13 +135,16 @@ function cartFunction(){
     for(var i = 0; i < 7; i++){
         if(p[i] != 0){
             newRow(i);
-            document.getElementById("xButton"+i).innerHTML = "<a href='javascript:void(0)' onclick='deleteCart("+i+")'>x</a>"
-            document.getElementById("pBitmap"+i).innerHTML = "Picture" + i;
-            document.getElementById("pName"+i).innerHTML = "Name" + i;
-            document.getElementById("pPrice"+i).innerHTML = "Price" + i;
+            document.getElementById("xButton"+i).innerHTML = "<a href='javascript:void(0)' onclick='deleteCart("+i+")' class='xButton'>x</a>"
+            document.getElementById("pBitmap"+i).innerHTML = tablePicture(i);
+            document.getElementById("pName"+i).innerHTML = tableName(i);
+            document.getElementById("pPrice"+i).innerHTML = tablePrice(i);
             document.getElementById("pQuantity"+i).innerHTML = p[i];
-            // j++;
         }
+        else j++;
+    }
+    if(j == 7){
+        document.getElementById('emptyCart').innerHTML = "Still empty, keep exploring ~"
     }
 }
 
@@ -159,8 +162,10 @@ function deleteCart(i){
     var row = document.getElementById("t"+i);
     row.parentNode.removeChild(row);
     rewriteData();
+    totalFunction()
 }
 
+//function to rewrite data after deleting some item from cart
 function rewriteData(){
     localStorage.setItem('FruSo',p[0]);
     localStorage.setItem('LoDo',p[1]);
@@ -170,3 +175,43 @@ function rewriteData(){
     localStorage.setItem('CuPe',p[5]);
     localStorage.setItem('LiBo',p[6]);
 }
+
+function tablePicture(i) {
+    if(i == 0) return "<img src='resource/p yinni.png' class='bitPic'>";
+    else if(i == 1) return "<img src='resource/bp doggo.png' class='bitPic'>";
+    else if(i == 2) return "<img src='resource/p christmas.png' class='bitPic'>";
+    else if(i == 3) return "<img src='resource/bp bunny.png' class='bitPic'>";
+    else if(i == 4) return "<img src='resource/p animal.png' class='bitPic'>";
+    else if(i == 5) return "<img src='resource/bp pengu.png' class='bitPic'>";
+    else if(i == 6) return "<img src='resource/p mushroomboy.png' class='bitPic'>";
+}
+
+function tableName(i) {
+    if(i == 0) return "•Fruit Soup Girl•";
+    else if(i == 1) return "•Love Doggo•";
+    else if(i == 2) return "•Christmas Vector•";
+    else if(i == 3) return "•Bunny Carrot•";
+    else if(i == 4) return "•Animal Vector•";
+    else if(i == 5) return "•Curious Pengu•";
+    else if(i == 6) return "•Little Boy•";
+}
+
+function tablePrice(i) {
+    if(i == 0 || i == 2 || i == 4) return 35;
+    else if(i == 1 || i == 5) return 45;
+    else if(i == 3) return 50;
+    else if(i == 6) return 40;
+}
+
+function totalFunction() {
+    var total = 0;
+    for(i = 0; i < 7; i++){
+        total += tablePrice(i) * p[i];
+    }
+    document.getElementById('total').innerHTML = "Total : " + total + " NT";
+}
+
+//js for setting animation
+// function animationMenu(){
+//     document.getElementById('sideMenu').className = "fadein";
+// }
