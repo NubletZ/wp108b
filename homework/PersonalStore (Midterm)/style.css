@@ -563,6 +563,7 @@ fieldset p {
     filter: brightness(50%);
     background-color: rgb(254, 219, 172);
     cursor: pointer;
+    transition: 1s;
 }
 
 .imgtxtDiv {
@@ -674,16 +675,27 @@ th {
     border-style: solid;
     border-color: rgb(252, 189, 140);
     border-collapse: collapse;
-    text-align: center;
 }
 
-td {
+tr {
     padding: 10px 20px 10px 20px;
     border-width: 0px 0px 3px 0px;
     border-style: solid;
     border-color: rgb(252, 189, 140);
     border-collapse: collapse;
+}
+
+td {
+    min-width: 30px;
+}
+
+.textCenter {
     text-align: center;
+}
+
+.textLeft {
+    text-align: left;
+    margin: 20px;
 }
 
 .bitPic {
@@ -713,4 +725,46 @@ td {
 .totalPrice p {
     padding: 0px;
     margin: 0px;
+}
+
+.marginTop {
+    margin-top: 80px;
+}
+
+.clickMe {
+    text-decoration: none;
+    color: rgb(254, 238, 226);
+    margin: 0;
+    font-weight: bold;
+}
+
+.memoireAbout {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+}
+
+.textAbout {
+    font-family: yikes;
+    color: rgb(255, 242, 204);
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    max-width: 700px;
+    font-size: 18px;
+}
+
+.faqText {
+    max-width: 850px;
+    text-align: left;
+    display: inline-block;
+    font-size: 23px;
+    font-family: yikes;
+    color: rgb(255, 242, 204);
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+#tableFaq td {
+    padding: 10px;
 }
