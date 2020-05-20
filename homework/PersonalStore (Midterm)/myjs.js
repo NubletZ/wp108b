@@ -215,3 +215,15 @@ function totalFunction() {
 // function animationMenu(){
 //     document.getElementById('sideMenu').className = "fadein";
 // }
+
+function checkOut() {
+    var j = 0;
+    for(i = 0; i < 7; i++){
+        if(p[i] != 0) j++;
+    }
+    if(j != 0){
+        startData();
+        location.href = "checkOut.html";
+    }
+    else alert("you don't have any item in your cart")
+}

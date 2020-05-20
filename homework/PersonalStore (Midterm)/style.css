@@ -262,7 +262,7 @@ form {
 
 .fadein {
     animation-name: fadein;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
 }
 
 .fadeout {
@@ -738,6 +738,8 @@ td {
     font-weight: bold;
 }
 
+/* FOR ABOUT.HTML */
+
 .memoireAbout {
     display: inline-block;
     position: relative;
@@ -764,6 +766,8 @@ td {
     font-size: 18px;
 }
 
+/* FOR FAQ.HTML */
+
 .faqText {
     max-width: 850px;
     text-align: left;
@@ -777,4 +781,31 @@ td {
 
 #tableFaq td {
     padding: 10px;
+}
+
+/* FOR CHECKOUT.HTML */
+
+.coText {
+    font-family: yikes;
+    color: rgb(255, 242, 204);
+    max-width: 600px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+.coTitle {
+    font-size: 25px;
+    margin: 0;
+}
+
+.coContent {
+    font-size: 18px;
+    margin: 0;
+}
+
+.authorBread {
+    height: 200px;
+    width: auto;
+    margin-top: 200px;
 }

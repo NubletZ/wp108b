@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>CHECK OUT | Nubletz Store</title>
         <meta charset="UTF-8">
-        <title>CART | Nubletz Store</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" scalable="no">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="myjs.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" scalable="no">
     </head>
     <body class="bg1 fadein">
         <div class="fixNav">
@@ -26,29 +26,15 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper">
-            <div class="container4">
-                <table id="cartTable" class="textCenter">
-                    <tr>
-                        <th></th>
-                        <th>ITEM</th>
-                        <th>NAME</th>
-                        <th>PRICE (NT)</th>
-                        <th>QUANTITY</th>
-                    </tr>
-                </table>
-                <p id="emptyCart"></p>
-                <div class="totalPrice">
-                    <p id="total">Total :</p>
-                </div>
-                <div class="wrapper">
-                    <button class="button2 bPosition" onclick="checkOut()">Check out</button>
-                </div>
+        <div class="wrapper fadein">
+            <img src="resource/Author Eat Bread.png" class="authorBread"><br>
+            <div class="coText">
+                <p class="coTitle">Thanks for shopping!</p>
+                <p class="coContent">
+                    Please complete the payment within 5 second. 
+                    After you complete the payment, I will process your item quickly.
+                </p>
             </div>
         </div>
-        <script>
-            cartFunction();
-            totalFunction();
-        </script>
     </body>
 </html>
