@@ -466,7 +466,7 @@ fieldset p {
         display: inline-block;
         float: none;
     }
-    .helloText, .faqText {
+    .helloText {
         text-align: center;
     }
     fieldset {
@@ -783,6 +783,11 @@ td {
     padding: 10px;
 }
 
+@media only screen and (max-width: 700px) {
+    .faqText {
+        text-align: center;
+    }
+}
 /* FOR CHECKOUT.HTML */
 
 .coText {
@@ -809,3 +814,4 @@ td {
     width: auto;
     margin-top: 200px;
 }
+
