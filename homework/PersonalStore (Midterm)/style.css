@@ -585,6 +585,16 @@ fieldset p {
     text-shadow: 2px 2px 5px rgb(163,61,59);
 }
 
+@media only screen and (max-width: 700px){
+    .imgtxtDiv div {
+        visibility: visible;
+        position: relative;
+    }
+    .imgtxtDiv div p {
+        margin-bottom: 0px;
+    }
+}
+
 /* Product Desc */
 
 /* wrapper and container4 also used in cart.html */
