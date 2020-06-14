@@ -1,0 +1,347 @@
+body {
+    padding : 0;
+    margin : 0;
+    overflow-x: hidden;
+    min-width: 100vw;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("resource/font/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Gochi";
+    src: url("resource/font/GochiHand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Candal";
+    src: url("resource/font/candal.regular.ttf");
+}
+
+/* FOR LOG IN SIGN IN SECTION */
+.logBackground {
+    background-color: rgb(246, 246, 239);
+    text-align: center;
+}
+
+.logWrapper {
+    flex-wrap: wrap;
+    margin-top: 100px;
+    text-align: center;
+    display: inline-block;
+}
+
+.logPic {
+    float: left;
+    height: 500px;
+    width: auto;
+    margin-top: 100px;
+    margin-right: 80px;
+}
+
+.logForm {
+    float: left;
+    /* padding-top: 50px; */
+    flex-wrap: wrap;
+    font-family: Gochi;
+    font-size: 24px;
+    color: black;
+    margin-left: 80px;
+}
+
+.logFormLeft {
+    float: left;
+    width: 160px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.logFormRight {
+    float: left;
+    width: 200px;
+}
+
+.logInput {
+    font-size: 18px;
+    font-family: OpenSans;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    width: 150px;
+
+    border-color: rgb(205, 203, 171);
+    background-color: rgb(251, 251, 247);
+    margin-bottom: 20px;
+}
+
+.logTitle {
+    font-family: Candal;
+    font-size: 100px;
+    color: rgb(254, 92, 73);
+    margin: 0;
+}
+
+.logInfo {
+    font-family: Gochi;
+    font-size: 28px;
+    color: black;
+    margin: 0;
+}
+
+.logInfoBottom {
+    font-family: Gochi;
+    font-size: 24px;
+    color: black;
+    margin-top: 80px;
+}
+
+.logBottomLink {
+    font-family: OpenSans;
+    font-size: 15px;
+    color: rgb(189, 197, 72);
+    text-decoration: underline;
+}
+
+.logButton {
+    background-color: rgb(189, 197, 72);
+    font-family: Gochi;
+    color: white;
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.logFormWrap1 {
+    flex-wrap: wrap;
+    height: 115px;
+}
+
+.logFormWrap2 {
+    flex-wrap: wrap;
+    height: 310px;
+}
+
+/* FOR HOME SECTION */
+.homePart1 {
+    height: 100vh;
+    min-width: 100vw;
+    background-color: rgb(77, 80, 137);
+    text-align: center;
+}
+
+.hp1Left {
+    float:left;
+    width: 40%;
+    background-color: rgb(77, 80, 137);
+    padding-top: 100px;
+}
+
+.hp2Left {
+    float:left;
+    width: 55%;
+    background-color: rgb(77, 80, 137);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.homePart2 {
+    height: 100vh;
+    min-width: 100vw;
+    background-color: white;
+    color: black;
+    text-align: center;
+    object-fit: contain;
+}
+
+.fixNav {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(77, 80, 137);
+}
+
+.Menu {
+    font-family: OpenSans;
+    cursor: pointer;
+    color: rgb(254, 238, 226);
+    border: none;
+    background-color: rgb(0,0,0,0);
+    z-index: 99;
+    padding-right: 12px;
+    padding-left: 8px;
+}
+
+.barMenu {
+    font-size: 30px;
+    float: left;
+}
+
+.contactMenu {
+    font-size: 28px;
+    float: right;
+    padding-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.leftMenu {
+    position: absolute;
+    width: 20%;
+    min-width: 300px;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    text-align: right;
+}
+
+.rightMenu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0 , 0, 0.5);
+}
+
+.menuButton {
+    padding: 12px 8px 12px 8px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+#xButton {
+    font-family: yikes;
+    color: rgb(254, 92, 73);
+    padding: 0px 8px 8px 8px;
+    text-decoration: none;
+}
+
+#xButton {
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+#xButton:hover {
+    color: rgb(255, 213, 88);
+    transition: 0.5s;
+}
+
+#sideMenu {
+    top: 0;
+    width: 0;
+    position: fixed;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.hp2Text {
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 0px;
+    color: black;
+    height: 100vw;
+}
+
+.hp2H1 {
+    font-family: Gochi;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.hp2P {
+    font-family: OpenSans;
+    font-size: 24px;
+}
+
+.hp3Info {
+    position: absolute;
+    left: 20vw;
+    margin-top: 25vh;
+    width: 30%;
+}
+
+.hp3Info p {
+    color: rgb(77, 80, 137);
+    font-family: OpenSans;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 700px){
+    .hp1Left, .hp2Left {
+        width: 100%
+    }
+
+    .hp3Info p {
+        font-size: 24px;
+    }
+
+    .hp3Info {
+        width: 50%;
+    }
+}
+
+/* FOR SHOP.HTML */
+.divforTitle {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+.divforTitle p {
+    font-family: Candal;
+    font-size: 52px;
+    margin-left: 250px;
+}
+
+.container3 {
+    width: 100%;
+    height: 70vh;
+    flex-wrap: wrap;
+    left: 0px;
+    right: 50px;
+    top: 200px;
+    position: relative;
+    overflow: hidden;
+    border-top: solid rgb(0, 0, 0, 0.5);
+    border-width: 3px 0px 0px 0px;
+}
+
+.iconBlack {
+    width: 200px;
+    padding: 100px, 10px, 10px, 10px;
+    float: left;
+}
+
+/* FOR PRODUCTPIC.HTML */
+.bookPic {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+#book p {
+    font-family: OpenSans;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* FOR PRODUCTQTY.HTML */
+.blackCover {
+    background-color: rgb(0, 0 , 0, 0.5);
+}
