@@ -44,5 +44,5 @@ function loginCheck(){
 
     if(!userFlag) alert("there's no such username");
 
-    if(userFlag && passFlag) location.href = "home.html";
+    // if(userFlag && passFlag) location.href = "home.html";
 }
