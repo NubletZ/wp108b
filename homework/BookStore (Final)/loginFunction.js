@@ -1,19 +1,19 @@
 var userFlag = false;
 var passFlag = false;
 
-var userArr, emailArr, addressArr, passArr;
+var userArr = [], emailArr = [], addressArr = [], passArr = [];
 
 if(localStorage.getItem("username") != null) userArr = localStorage.getItem("username").split(',');
-else userArr = 0;
+else userArr.push(0);
 
 if(localStorage.getItem("email") != null) emailArr = localStorage.getItem("email").split(',');
-else emailArr = 0;
+else emailArr.push(0);
 
 if(localStorage.getItem("address") != null) addressArr = localStorage.getItem("address").split(',');
-else addressArr = 0;
+else addressArr.push(0);
 
 if(localStorage.getItem("pass") != null) passArr = localStorage.getItem("pass").split(',');
-else passArr = 0;
+else passArr.push(0);
 
 function loginCheck(){
     var x = document.getElementById("loginForm");
