@@ -38,6 +38,8 @@ function signIn_Click(){
     passwordCheck();
     if(dataFalse == 0) {
         addData();
+        alert("Your account data has been recorded!");
+        location.href = "home.html";
     }
 }
 

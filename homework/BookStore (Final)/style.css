@@ -2,7 +2,6 @@ body {
     padding : 0;
     margin : 0;
     overflow-x: hidden;
-    min-width: 100vw;
 }
 
 @font-face {
@@ -40,6 +39,7 @@ body {
     margin-top: 100px;
     margin-right: 80px;
 }
+
 
 .logForm {
     float: left;
@@ -86,6 +86,23 @@ body {
     font-size: 100px;
     color: rgb(254, 92, 73);
     margin: 0;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 700px){
+    .logPic {
+        height: 250px;
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .logForm {
+        margin-left: 0;
+    }
+    
+    .logTitle {
+        padding: 0;
+    }
 }
 
 .logInfo {
@@ -134,10 +151,11 @@ body {
 
 /* FOR HOME SECTION */
 .homePart1 {
-    height: 100vh;
+    min-height: 100vh;
     min-width: 100vw;
     background-color: rgb(77, 80, 137);
     text-align: center;
+    overflow: hidden;
 }
 
 .hp1Left {
@@ -195,6 +213,7 @@ body {
     padding-top: 5px;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 8px;
 }
 
 .leftMenu {
@@ -249,10 +268,11 @@ body {
 
 .hp2Text {
     text-align: center;
-    margin-right: 30px;
     margin-top: 0px;
     color: black;
-    height: 100vw;
+    height: 100vh;
+    float:right;
+    width: 75%;
 }
 
 .hp2H1 {
@@ -260,11 +280,15 @@ body {
     font-size: 40px;
     margin: 0;
     padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hp2P {
     font-family: OpenSans;
     font-size: 24px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hp3Info {
@@ -280,6 +304,13 @@ body {
     font-size: 30px;
 }
 
+
+.homePic2 {
+    height:100vh; 
+    float:left; 
+    width: 25%;
+}
+
 @media only screen and (max-width: 700px){
     .hp1Left, .hp2Left {
         width: 100%
@@ -290,7 +321,29 @@ body {
     }
 
     .hp3Info {
-        width: 50%;
+        width: 70%;
+        left: 25vw;
+    }
+
+    .hp2Text {
+        width: 93vw;
+        padding: 20px;
+        background-color: white;
+        height: unset;
+    }
+}
+@media only screen and (max-width: 700px){
+    .hp3Info {
+        width: 55%;
+        left: 40vw;
+    }
+    
+    .hp3Info p {
+        font-size: 17px;
+    }
+
+    .homePic2 {
+        width: 100%;
     }
 }
 

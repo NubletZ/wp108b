@@ -5,7 +5,7 @@
 const login = {}
 
 login.html = `
-<h1 class="logTitle" style="padding-top:50px">LOG IN</h1>
+<h1 class="logTitle">LOG IN</h1>
 <p class="logInfo">Please log in before shopping in our store!</p><br>
 <div class="logFormWrap1">
     <div class="logFormLeft">
