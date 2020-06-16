@@ -31,9 +31,25 @@ function loginCheck(){
     for(i = 0; i < userArr.length; i++){
         if(userfill == userArr[i]){
             userFlag = true;
-            var ud = i;
-            if(passfill == passArr[ud]){
+            if(passfill == passArr[i]){
                 passFlag = true;
+                localStorage.setItem("currentUser", userfill);
+                localStorage.setItem("currentAddress", addressArr[i]);
+                localStorage.setItem("currentEmail", emailArr[i]);
+                break;
+            }
+            else{
+                alert("wrong password");
+                break;
+            }
+        }
+        else if(userfill == admin.username){
+            userFlag = true;
+            if(passfill == admin.password){
+                passFlag = true;
+                localStorage.setItem("currentUser", admin.username);
+                localStorage.setItem("currentAddress", admin.address);
+                localStorage.setItem("currentEmail", admin.email);
                 break;
             }
             else{

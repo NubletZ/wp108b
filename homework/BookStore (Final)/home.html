@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="myFunction.js"></script>
+        <script type="text/javascript" src="loginFunction.js"></script>
+        <script type="text/javascript" src="userData.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color: rgb(77, 80, 137);">
+    <body style="background-color: rgb(77, 80, 137);" onload="userLoad()">
         <div class="fixNav" id="top">
             <button class="Menu barMenu" onclick="openMenu()"><b>☰ <span style="font-size:28px">MENU</b></span></button>
             <a href="#" class="Menu contactMenu">CONTACT</a>
@@ -24,8 +26,8 @@
                         <a href="shop.html" class="menuButton">
                             <img src="resource/shop.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'shop')" onmouseout="sideMenu_Out(this, 'shop')">
                         </a>
-                        <a href="order.html" class="menuButton">
-                            <img src="resource/order.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
+                        <a href="order.html" id="orderButton">
+                            <img src="resource/order.png"  style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
                         </a>
                         <a href="aboutus.html" class="menuButton">
                             <img src="resource/aboutUs.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'aboutUs')" onmouseout="sideMenu_Out(this, 'aboutUs')">

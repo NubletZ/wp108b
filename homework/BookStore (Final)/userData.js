@@ -63,7 +63,7 @@ function userCheck(user){
         userArr.push(lsUsername[i]);
     }
     for(i = 0; i < userArr.length; i++){
-        if(user == userArr[i]){
+        if(user == userArr[i] && user == admin.username){
             alert("The username has been used by another people");
             dataFalse++;
             break;

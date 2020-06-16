@@ -241,6 +241,12 @@ body {
     text-align: center;
 }
 
+#orderButton {
+    padding: 0;
+    display: none;
+    text-align: center;
+}
+
 #xButton {
     font-family: yikes;
     color: rgb(254, 92, 73);
@@ -370,9 +376,12 @@ body {
     right: 50px;
     top: 200px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-top: solid rgb(0, 0, 0, 0.5);
     border-width: 3px 0px 0px 0px;
+    padding-top: 20px;
 }
 
 .iconBlack {
@@ -381,11 +390,21 @@ body {
     float: left;
 }
 
+.iproductQty {
+    width: 0vw;
+    height: 100vh;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    border-style: none;
+}
+
 /* FOR PRODUCTPIC.HTML */
 .bookPic {
     width: 200px;
     float: left;
     margin-right: 20px;
+    margin-left: 30px;
 }
 
 #book p {
