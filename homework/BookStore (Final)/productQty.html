@@ -7,13 +7,13 @@
         <script type="text/javascript" src="bookData.js"></script>
     </head>
     <body style="background-color: rgb(0, 0, 0, 0.5); text-align: center;">
-        <div style="position:absolute;width:100%;text-align:center; margin-top: 25vh; font-family: Gochi;">
-            <p id="bookTitle" style="font-size: 45px; font-weight: bold; color:white;width:520px;display: inline-block; margin-bottom: 0; min-height: 105px;">Title</p>
+        <div class="pqtyWrapper"> 
+            <p id="bookTitle" style="font-size: 45px" class="pqtyText">Title</p>
             <p id="bookPrice" style="font-size: 30px">Price: </p>
             <div style="display: inline-block; width: 160px">
-                <button class="logButton" style="float:left;margin-top: 20px;">+</button>
-                <p id="prdQty" style="float:left;margin:0px 30px 0px 30px; padding:0;font-family: OpenSans; font-size: 55px;font-weight: bold;">5</p>
-                <button class="logButton" style="float:left;margin-top: 20px;padding-left: 12px; padding-right: 12px">-</button>
+                <button class="logButton pqtyButton">+</button>
+                <p id="prdQty" class="prdQty">5</p>
+                <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px">-</button>
             </div>
         </div>
         <img src="resource/boxQty.png" style="width:600px; display:inline-block; margin-top: 25vh; z-index:-1">

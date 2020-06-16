@@ -15,16 +15,17 @@ function bookStock(id){
     document.getElementById(id).innerHTML = "Stock : " + localStorage.getItem(id);
 }
 
+
+//showing pop up for user to decide the book quantity;
 function show_productQty(bookId){
-    var dataArr = localStorage.getItem(bookId).split(':');
-
-    // use reference code from https://stackoverflow.com/questions/1088544/get-element-from-within-an-iframe
-    var iproductQty = document.getElementById('iproductQty');
-    var bookData = iproductQty.contentDocument || iproductQty.contentWindow.document;
-    //
-
-    content.document.getElementById("bookTitle").innerHTML = bookData[0];
-    content.document.getElementById("bookPrice").innerHTML = bookData[1];
+    var bookData = localStorage.getItem(bookId).split(':');
     
-    document.getElementById("iproductQty").style.width = "100vw";
+    document.getElementById("bookTitle").innerHTML = bookData[0];
+    document.getElementById("bookPrice").innerHTML = "Price : " + bookData[1] + " NT ";
+    
+    document.getElementById("pqtyWrapper").style.display = "block";
+}
+
+function close_productQty(){
+    document.getElementById("pqtyWrapper").style.display = "none";
 }

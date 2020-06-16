@@ -10,6 +10,12 @@
             <img src="resource/iconBlack.png" class="iconBlack">
             <p>OUR BOOKS COLLECTION</p>
         </div>
+
+        <!-- show products part -->
+        <!-- List of function : 
+                bookStock(id) from bookData.js
+                show_productQty(bookId) 
+        -->
         <div class="container3">
             <div style="width:100%; height:280px;" id="book">
                 <img src="resource/book/b1.jpg" class="bookPic">
@@ -60,7 +66,27 @@
             <a href="#" class="Menu contactMenu">
                 <img src="resource/cart.png" style="width:28px">
             </a>
-            <iframe id="iproductQty" src="productQty.html" allowtransparency="true" class="iproductQty"></iframe>
+            
+            <!-- pop up to set the quantity -->
+            <div class="pqtyWrapper" id="pqtyWrapper">
+                <div style="position:absolute; width:100vw; height:100vh; top:0;" onclick="close_productQty()"></div> 
+                <img src="resource/boxQty.png" style="width:600px; z-index: 1; position: relative">
+                <br>
+                <div class="pqtyDivText">
+                    <p id="bookTitle" style="font-size: 45px" class="pqtyText">Title</p>
+                    <p id="bookPrice" style="font-size: 30px; margin-bottom: 0;">Price: </p>
+                    <div style="display: inline-block; width: 160px">
+                        <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px">-</button>
+                        <p id="prdQty" class="prdQty">5</p>
+                        <button class="logButton pqtyButton">+</button>
+                    </div>
+                    <br>
+                    <button class="logButton" style="background-color: rgb(149,175,55); padding-right:50px; padding-left:50px">Add to cart</button>
+                    <br><br>
+                    <p style="font-size: 20px; color: white; margin: 10px">*click outside the box to close the box</p>
+                </div>
+            </div>
+
             <div id="sideMenu">
                 <div class="rightMenu">
                     <div class="leftMenu">
