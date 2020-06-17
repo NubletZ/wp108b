@@ -33,4 +33,6 @@ function userLoad(){
         document.getElementById("orderButton").style.padding = "0";
         document.getElementById("orderButton").style.display = "none";
     }
+
+    if(user == null) location.href = "index.html"
 }

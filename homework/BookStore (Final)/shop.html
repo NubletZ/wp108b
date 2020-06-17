@@ -4,18 +4,22 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="myFunction.js"></script>
         <script type="text/javascript" src="bookData.js"></script>
+        <script type="text/javascript" src="myFunction.js"></script>
+        <script type="text/javascript" src="userData.js"></script>
     </head>
-    <body style="background-color: white;">
+    <!-- 
+        List of function :
+        userLoad() -> used to differentiati is user account is as user or admin //myFunction.js
+        show_productQty(bookId) -> show book quantity box //bookData.js
+        bookStock(id) -> show book stock //bookData.js
+     -->
+
+    <body style="background-color: white;" onload="userLoad()">
         <div class="divforTitle fixed">
             <img src="resource/iconBlack.png" class="iconBlack">
             <p>OUR BOOKS COLLECTION</p>
         </div>
 
-        <!-- show products part -->
-        <!-- List of function : 
-                bookStock(id) from bookData.js
-                show_productQty(bookId) 
-        -->
         <div class="container3">
             <div style="width:100%; height:280px;" id="book">
                 <img src="resource/book/b1.jpg" class="bookPic">
@@ -60,6 +64,7 @@
                 bookStock('stockb4');
             </script>
         </div>
+
         <div class="fixNav" id="top">
             <button class="Menu barMenu" onclick="openMenu()"><b>☰ <span style="font-size:28px">MENU</b></span></button>
             <a href="#" class="Menu contactMenu">CONTACT</a>
@@ -77,7 +82,12 @@
                     <p id="bookPrice" style="font-size: 30px; margin-bottom: 0;">Price: </p>
                     <div style="display: inline-block; width: 160px">
                         <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px">-</button>
-                        <p id="prdQty" class="prdQty">5</p>
+
+                        <form>
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="prdQty prdQtyNum" id="prdQty" value="1">
+                        </form>
+
+                        <!-- <p id="prdQty" class="prdQty">5</p> -->
                         <button class="logButton pqtyButton">+</button>
                     </div>
                     <br>
@@ -98,7 +108,7 @@
                         <a href="shop.html" class="menuButton">
                             <img src="resource/shop.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'shop')" onmouseout="sideMenu_Out(this, 'shop')">
                         </a>
-                        <a href="order.html" class="menuButton">
+                        <a href="order.html" class="menuButton" id="orderButton">
                             <img src="resource/order.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
                         </a>
                         <a href="aboutus.html" class="menuButton">

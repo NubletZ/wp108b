@@ -457,3 +457,12 @@ body {
     width: 600px;
     display: inline-block;
 }
+
+.prdQtyNum {
+    border: none;
+    background-color: rgb(246,249,252);
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
