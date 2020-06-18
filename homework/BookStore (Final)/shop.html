@@ -81,14 +81,13 @@
                     <p id="bookTitle" style="font-size: 45px" class="pqtyText">Title</p>
                     <p id="bookPrice" style="font-size: 30px; margin-bottom: 0;">Price: </p>
                     <div style="display: inline-block; width: 160px">
-                        <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px">-</button>
-
+                        <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px" onclick="productQty(1)">-</button>
                         <form>
                             <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="prdQty prdQtyNum" id="prdQty" value="1">
                         </form>
 
                         <!-- <p id="prdQty" class="prdQty">5</p> -->
-                        <button class="logButton pqtyButton">+</button>
+                        <button class="logButton pqtyButton" onclick="productQty(2)">+</button>
                     </div>
                     <br>
                     <button class="logButton" style="background-color: rgb(149,175,55); padding-right:50px; padding-left:50px">Add to cart</button>
@@ -102,6 +101,12 @@
                     <div class="leftMenu">
                         <br>
                         <a href="javascript:void(0)" id="xButton" onclick="closeMenu()">x</a><br><br>
+                        <div style="text-align: center;">
+                            <img src="resource/profilePhoto.png" style="border-radius: 100%; width: 80px;position: relative; padding:10px;">
+                            <p class="menuButton menuUser" id="currentUser">User</p>
+                            <p class="menuButton menuEmail" id="currentEmail">user@email.com</p>
+                            <a href="index.html" class="menuButton menuLogout"><u><b>Log out</b></u></a>
+                        </div>
                         <a href="home.html" class="menuButton">
                             <img src="resource/home.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'home')" onmouseout="sideMenu_Out(this, 'home')">
                         </a>

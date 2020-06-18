@@ -25,6 +25,7 @@ function sideMenu_Out(id, fileName){
 // haven't been used yet
 function userLoad(){
     var user = localStorage.getItem("currentUser");
+    var email = localStorage.getItem("currentEmail");
     if(user == admin.username){
         document.getElementById("orderButton").style.padding = "12px 8px 12px 8px";
         document.getElementById("orderButton").style.display = "block";
@@ -35,4 +36,18 @@ function userLoad(){
     }
 
     if(user == null) location.href = "index.html"
+
+    document.getElementById("currentUser").innerHTML = user;
+    document.getElementById("currentEmail").innerHTML = email;
+}
+
+// decrase or increase the product quantity
+function productQty(differ){
+    var qty = document.getElementById("prdQty").value;
+    if(differ == 2){
+        document.getElementById("prdQty").value = 1 + + qty;
+    }
+    else if (differ == 1 && qty > 1){
+        document.getElementById("prdQty").value = qty - 1;
+    }
 }

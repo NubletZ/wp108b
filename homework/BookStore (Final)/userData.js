@@ -4,7 +4,7 @@ const mainUser = {
     username: 'user',
     password: 'user',
     address: 'NQU',
-    email: "-"
+    email: "testing@yahoo.com"
 }
 
 const admin = {

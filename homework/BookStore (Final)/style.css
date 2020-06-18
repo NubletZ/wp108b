@@ -241,6 +241,32 @@ body {
     text-align: center;
 }
 
+.menuUser {
+    font-size: 26px;
+    font-family: OpenSans;
+    color: rgb(254, 92, 73);
+    padding: 0;
+    margin: 0;
+    font-weight: 1000;
+}
+
+.menuEmail {
+    font-size: 18px;
+    font-family: OpenSans;
+    color: rgb(254, 92, 73);
+    padding: 0;
+    margin: 0;
+}
+
+.menuLogout {
+    font-size: 14px;
+    font-family: OpenSans;
+    color: rgb(254, 92, 73);
+    font-style: underline;
+    padding: 0;
+    margin: 0;
+}
+
 #orderButton {
     padding: 0;
     display: none;
@@ -248,7 +274,7 @@ body {
 }
 
 #xButton {
-    font-family: yikes;
+    font-family: candal;
     color: rgb(254, 92, 73);
     padding: 0px 8px 8px 8px;
     text-decoration: none;
@@ -317,6 +343,18 @@ body {
     width: 25%;
 }
 
+.shopNewsTitle {
+    position: absolute;
+    right: 0px;
+    height: 400px; 
+    width: auto
+}
+
+@media only screen and (max-width: 1200px){
+    .shopNewsTitle {
+        height: 250px;
+    }
+}
 @media only screen and (max-width: 700px){
     .hp1Left, .hp2Left {
         width: 100%
