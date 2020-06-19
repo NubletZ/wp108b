@@ -8,7 +8,12 @@
         <script type="text/javascript" src="userData.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color: rgb(77, 80, 137);" onload="userLoad()">
+    <body  onload="userLoad()">
+        <div class="divforTitle" style="border-style: solid; border-width: 0px 0px 3px 0px; border-color: rgb(0,0,0,0.5)">
+            <img src="resource/iconBlack.png" class="iconBlack">
+            <p>YOUR SHOPPING CART</p>
+        </div>
+
         <div class="fixNav" id="top">
             <button class="Menu barMenu" onclick="openMenu()"><b>☰ <span style="font-size:28px">MENU</b></span></button>
             <a href="contact.html" class="Menu contactMenu">CONTACT</a>
@@ -32,8 +37,8 @@
                         <a href="shop.html" class="menuButton">
                             <img src="resource/shop.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'shop')" onmouseout="sideMenu_Out(this, 'shop')">
                         </a>
-                        <a href="order.html" id="orderButton">
-                            <img src="resource/order.png"  style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
+                        <a href="order.html" class="menuButton" id="orderButton">
+                            <img src="resource/order.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
                         </a>
                         <a href="aboutus.html" class="menuButton">
                             <img src="resource/aboutUs.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'aboutUs')" onmouseout="sideMenu_Out(this, 'aboutUs')">
@@ -42,42 +47,27 @@
                 </div>
             </div>
         </div>
-        <div class="homePart1">
-            <span class="hp1Left">
-                <img src="resource/icon 306.png" id="shopIcon" style="width:100%; object-fit: contain;">
-                <p style="font-family:gochi; font-size: 40px; color:white">-NubletZ-</p>
-            </span>
-            <span class="hp2Left">
-                <img src="resource/monForHome.png" style="width:100%; object-fit:contain;">
-            </span>
-        </div>
-        <div class="homePart2">
-            <img src="resource/homePart2.png" class="homePic2">
-            <div class="hp2Text">
-                <br><br>
-                <p class="hp2H1">Welcome to 306’s Book Store!</p>
-                <p class="hp2P">
-                    This store was founded by Nubletz in 12 June 2020.
-                    Here we sell a lot of books especially Computer Science book.
-                    Right now we don’t have any offline store, we store all of our books in Science and Technology building, room number 306.
-                </p><br>
-                <p class="hp2P">
-                    We only serve an order around Taiwan, for those who are not in Taiwan and are interested to buy our books,
-                    please contact us!
-                </p>
+        <div class="wrapper">
+            <div class="container4">
+                <table id="cartTable" class="textCenter">
+                    <tr>
+                        <th></th>
+                        <th>NAME</th>
+                        <th>PRICE (NT)</th>
+                        <th>QUANTITY</th>
+                    </tr>
+                </table>
+                <p id="emptyCart"></p>
+                <div class="totalPrice">
+                    <p id="total">Total :</p>
+                </div>
+                <div class="wrapper">
+                    <button class="logButton" onclick="checkOut()">Checkout</button>
+                </div>
             </div>
         </div>
-        <div class="homePart2" style="background-color: rgb(77, 80, 137);overflow-x: hidden;">
-            <div class="hp3Info">
-                <p>
-                    Due to the current situation, orders from <b>outside of Taiwan</b> won’t be shipped before 30 June.
-                </p>
-                <p>
-                    Any orders <b>within Taiwan</b> are being shipped but with longer transit than usual
-                </p>
-            </div>
-            <img src="resource/homePart3.png" style="width:90%; margin-top: 50px; min-width: 1000px;">
-            <img src="resource/shopNews.png" class="shopNewsTitle">
-        </div>
+        <script>
+            cartFunction();
+        </script>
     </body>
 </html>

@@ -9,9 +9,11 @@
     </head>
     <!-- 
         List of function :
-        userLoad() -> used to differentiati is user account is as user or admin //myFunction.js
-        show_productQty(bookId) -> show book quantity box //bookData.js
-        bookStock(id) -> show book stock //bookData.js
+        1. userLoad() -> used to differentiati is user account is as user or admin //myFunction.js
+        2. show_productQty(bookId) -> show book quantity box //bookData.js
+        3. close_producQty() -> //bookData.js
+        4. bookStock(id) -> show book stock //bookData.js
+        5. productQty(differ) -> //myFunction.js
      -->
 
     <body style="background-color: white;" onload="userLoad()">
@@ -27,8 +29,8 @@
                 <p><b>Title : Essential Calculus</b></p>
                 <p>Writer : Ron Larson & Bruce Edwards</p>
                 <p id="stockb1">Stock : </p>
-                <p>Price : 1000 NT</p>
-                <button class="logButton" onclick="show_productQty('b1')">Add to cart</button>
+                <p id="priceb1">Price : </p>
+                <button id="buttonShop1" class="logButton" onclick="show_productQty('b1')">Add to cart</button>
             </div>
             <div style="width:100%; height:280px;" id="book">
                 <img src="resource/book/b2.jpg" class="bookPic">
@@ -36,8 +38,8 @@
                 <p><b>Title : Digital Design</b></p>
                 <p>Writer : M. Morris Mano & Michael D. Ciletti</p>
                 <p id="stockb2">Stock : </p>
-                <p>Price : 850 NT</p>
-                <button class="logButton" onclick="show_productQty('b2')">Add to cart</button>
+                <p id="priceb2">Price : </p>
+                <button id="buttonShop2" class="logButton" onclick="show_productQty('b2')">Add to cart</button>
             </div>
             <div style="width:100%; height:280px;" id="book">
                 <img src="resource/book/b3.jpg" class="bookPic">
@@ -45,8 +47,8 @@
                 <p><b>Title : Foundations of Computer Science</b></p>
                 <p>Writer : Behrouz Forouzan</p>
                 <p id="stockb3">Stock : </p>
-                <p>Price : 450 NT</p>
-                <button class="logButton" onclick="show_productQty('b3')">Add to cart</button>
+                <p id="priceb3">Price : </p>
+                <button id="buttonShop3" class="logButton" onclick="show_productQty('b3')">Add to cart</button>
             </div>
             <div style="width:100%; height:280px;" id="book">
                 <img src="resource/book/b4.jpg" class="bookPic">
@@ -54,35 +56,49 @@
                 <p><b>Title : The Design and Analysis of Algorithms</b></p>
                 <p>Writer : Anany Levitin</p>
                 <p id="stockb4">Stock : </p>
-                <p>Price : 540 NT</p>
-                <button class="logButton" onclick="show_productQty('b4')">Add to cart</button>
+                <p id="priceb4">Price : </p>
+                <button id="buttonShop4" class="logButton" onclick="show_productQty('b4')">Add to cart</button>
             </div>
             <script>
                 bookStock('stockb1');
                 bookStock('stockb2');
                 bookStock('stockb3');
                 bookStock('stockb4');
+                bookPrice('b1');
+                bookPrice('b2');
+                bookPrice('b3');
+                bookPrice('b4');
             </script>
         </div>
 
         <div class="fixNav" id="top">
             <button class="Menu barMenu" onclick="openMenu()"><b>☰ <span style="font-size:28px">MENU</b></span></button>
-            <a href="#" class="Menu contactMenu">CONTACT</a>
-            <a href="#" class="Menu contactMenu">
+            <a href="contact.html" class="Menu contactMenu">CONTACT</a>
+            <a href="cart.html" class="Menu contactMenu">
                 <img src="resource/cart.png" style="width:28px">
             </a>
             
-            <!-- pop up to set the quantity -->
+            <!-- pop up to set: 
+                for user: the quantity to be bough
+                for admin: the stock of the book and the price
+            -->
             <div class="pqtyWrapper" id="pqtyWrapper">
-                <div style="position:absolute; width:100vw; height:100vh; top:0;" onclick="close_productQty()"></div> 
+                <div style="position:absolute; width:100vw; height:100vh; top:0;" onclick="close_productQty()"></div>
                 <img src="resource/boxQty.png" style="width:600px; z-index: 1; position: relative">
                 <br>
                 <div class="pqtyDivText">
                     <p id="bookTitle" style="font-size: 45px" class="pqtyText">Title</p>
-                    <p id="bookPrice" style="font-size: 30px; margin-bottom: 0;">Price: </p>
+                    <!-- <p id="bookPrice" style="font-size: 30px; margin-bottom: 0;">Price: </p> -->
+                    <div style="display: inline-block; width: 100%; padding-left: 200px; padding-right: 200px; margin-top: 25px;">
+                        <p style="font-size:30px; margin:0; width:80px; padding: 0; float: left">Price: </p>
+                        <input id="bookPrice" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="prdQtyNum" type="text" style="font-size:30px; margin-bottom:0; float: left; background-color: rgba(0,0,0,0);" value="1000">
+                        <p style="font-size:30px; margin:0; width:40px; padding: 0; float: left">NT</p>
+                    </div>
+                    
                     <div style="display: inline-block; width: 160px">
                         <button class="logButton pqtyButton" style="padding-left: 12px; padding-right: 12px" onclick="productQty(1)">-</button>
                         <form>
+                            <!-- the oninput code using a reference code from https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input -->
                             <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="prdQty prdQtyNum" id="prdQty" value="1">
                         </form>
 
@@ -90,7 +106,7 @@
                         <button class="logButton pqtyButton" onclick="productQty(2)">+</button>
                     </div>
                     <br>
-                    <button class="logButton" style="background-color: rgb(149,175,55); padding-right:50px; padding-left:50px">Add to cart</button>
+                    <button id="buttonPopup" class="logButton" style="background-color: rgb(149,175,55); padding-right:50px; padding-left:50px" onclick="">Add to cart</button>
                     <br><br>
                     <p style="font-size: 20px; color: white; margin: 10px">*click outside the box to close the box</p>
                 </div>
@@ -122,7 +138,14 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+        <script>
+            var curUser = localStorage.getItem("currentUser");
+            if(curUser == 'admin'){
+                for(i = 1; i <= 4; i++){
+                    document.getElementById("buttonShop"+i).innerHTML = "set product & stock";
+                }
+            }
+        </script>
     </body>
 </html>
