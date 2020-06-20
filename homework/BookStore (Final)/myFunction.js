@@ -93,9 +93,9 @@ function deleteCart(i){
     row.parentNode.removeChild(row);
     totalFunction();
 }
-
+var total;
 function totalFunction() {
-    var total = 0;
+    total = 0;
     for(i = 1; i < 5; i++){
         var price = localStorage.getItem("b" + i).split(':');
         var qty = parseInt(localStorage.getItem("orderb" + i));
@@ -124,5 +124,69 @@ function checkOut(){
             break;
         }
     }
-    localStorage.setItem(userId + "userOrder", p[0] + "," + p[1] + "," + p[2] + "," + p[3]);
+    localStorage.setItem(userId + "userOrder", p[0] + "," + p[1] + "," + p[2] + "," + p[3] + "," + total);
+}
+
+// FUNCTION FOR ORDER.HTML
+var allUser, allEmail, allAddress, data;
+function orderCart(){
+    allUser = localStorage.getItem("username").split(',');
+    allEmail = localStorage.getItem("email").split(',');
+    allAddress = localStorage.getItem("address").split(',');
+    if(localStorage.getItem("-1userOrder") != null){
+        newOrderRow("-1");
+        innerOrderRow("-1");
+    }
+    for(i = 0; i < allUser.length; i++){
+        if(localStorage.getItem(i+"userOrder") != null){
+            data = localStorage.getItem(i+"userOrder").split(',');
+            newOrderRow(i);
+            innerOrderRow(i);
+        }
+    }
+}
+
+function newOrderRow(i){
+    document.getElementById('ocartTable').insertRow().id="tr"+i;
+    document.getElementById("tr"+i).insertCell().id="finButton"+i;
+    document.getElementById("tr"+i).insertCell().id="oName"+i;
+    document.getElementById("tr"+i).insertCell().id="oEmail"+i;
+    document.getElementById("tr"+i).insertCell().id="oAddress"+i;
+    document.getElementById("tr"+i).insertCell().id="oB1"+i;
+    document.getElementById("tr"+i).insertCell().id="oB2"+i;
+    document.getElementById("tr"+i).insertCell().id="oB3"+i;
+    document.getElementById("tr"+i).insertCell().id="oB4"+i;
+    document.getElementById("tr"+i).insertCell().id="oPrice"+i;
+}
+
+function innerOrderRow(i){
+    document.getElementById("finButton"+i).innerHTML= "<a href='javascript:void(0)' onclick='deleteoCart("+i+")' class='xButton'>SENT</a>"
+    if(i == "-1"){
+        document.getElementById("oName"+i).innerHTML= mainUser.username;
+        document.getElementById("oEmail"+i).innerHTML= mainUser.email;
+        document.getElementById("oAddress"+i).innerHTML= mainUser.address;
+    }
+    else{
+        document.getElementById("oName"+i).innerHTML= allUser[i];
+        document.getElementById("oEmail"+i).innerHTML= allEmail[i];
+        document.getElementById("oAddress"+i).innerHTML= allAddress[i];
+    }
+    document.getElementById("oB1"+i).innerHTML= data[0];
+    document.getElementById("oB2"+i).innerHTML= data[1];
+    document.getElementById("oB3"+i).innerHTML= data[2];
+    document.getElementById("oB4"+i).innerHTML= data[3];
+    document.getElementById("oPrice"+i).innerHTML= data[4];
+}
+
+function countpendOrder(){
+    var table = document.getElementById("ocartTable");
+    var rows = table.rows.length - 1;
+    document.getElementById("pendOrder").innerHTML = "Total pending item : " + rows;
+}
+
+function deleteoCart(i){
+    localStorage.removeItem(i + "userOrder");
+    var row = document.getElementById("tr"+i);
+    row.parentNode.removeChild(row);
+    countpendOrder();
 }
