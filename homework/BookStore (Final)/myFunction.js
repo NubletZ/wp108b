@@ -58,7 +58,7 @@ function cartFunction(){
     var j = 0;
     for(var i = 0; i < 4; i++){
         var id = i+1;
-        if(localStorage.getItem("orderb"+id) != 0){
+        if(localStorage.getItem("orderb"+id) != 0 && localStorage.getItem("orderb"+id) != null){
             newRow(i);
             var bookData = localStorage.getItem("b"+id).split(':');
             document.getElementById("xButton"+i).innerHTML = "<a href='javascript:void(0)' onclick='deleteCart("+i+")' class='xButton'>x</a>"
@@ -70,6 +70,7 @@ function cartFunction(){
     }
     if(j == 4){
         document.getElementById('emptyCart').innerHTML = "Still empty, keep exploring ~"
+        document.getElementById("buttonCOut").disabled = true;
     }
     totalFunction();
 }
@@ -113,31 +114,35 @@ function checkOut(){
         p[i] = localStorage.getItem("orderb" + id);
     }
     var cUser = localStorage.getItem("currentUser");
-    var allUser = localStorage.getItem("username").split(',');
-    for(i = 0; i < allUser.length; i++){
+    for(i = 0; i < userArr.length; i++){
         if(cUser == mainUser.username){
             userId = -1;
             break;
         }
-        else if(cUser == allUser[i]){
+        else if(cUser == userArr[i]){
             userId = i;
             break;
         }
     }
     localStorage.setItem(userId + "userOrder", p[0] + "," + p[1] + "," + p[2] + "," + p[3] + "," + total);
+
+    for(i = 1; i < 5; i++){
+        localStorage.removeItem("orderb" + i);
+    }
+
+    location.href = "cart.html";
+    alert("Your order has been passed to the seller");
 }
 
 // FUNCTION FOR ORDER.HTML
-var allUser, allEmail, allAddress, data;
+var data, dataUser;
 function orderCart(){
-    allUser = localStorage.getItem("username").split(',');
-    allEmail = localStorage.getItem("email").split(',');
-    allAddress = localStorage.getItem("address").split(',');
     if(localStorage.getItem("-1userOrder") != null){
+        dataUser = localStorage.getItem("-1userOrder").split(',');
         newOrderRow("-1");
         innerOrderRow("-1");
     }
-    for(i = 0; i < allUser.length; i++){
+    for(i = 0; i < userArr.length; i++){
         if(localStorage.getItem(i+"userOrder") != null){
             data = localStorage.getItem(i+"userOrder").split(',');
             newOrderRow(i);
@@ -165,17 +170,22 @@ function innerOrderRow(i){
         document.getElementById("oName"+i).innerHTML= mainUser.username;
         document.getElementById("oEmail"+i).innerHTML= mainUser.email;
         document.getElementById("oAddress"+i).innerHTML= mainUser.address;
+        document.getElementById("oB1"+i).innerHTML= dataUser[0];
+        document.getElementById("oB2"+i).innerHTML= dataUser[1];
+        document.getElementById("oB3"+i).innerHTML= dataUser[2];
+        document.getElementById("oB4"+i).innerHTML= dataUser[3];
+        document.getElementById("oPrice"+i).innerHTML= dataUser[4];
     }
     else{
-        document.getElementById("oName"+i).innerHTML= allUser[i];
-        document.getElementById("oEmail"+i).innerHTML= allEmail[i];
-        document.getElementById("oAddress"+i).innerHTML= allAddress[i];
+        document.getElementById("oName"+i).innerHTML= userArr[i];
+        document.getElementById("oEmail"+i).innerHTML= emailArr[i];
+        document.getElementById("oAddress"+i).innerHTML= addressArr[i];
+        document.getElementById("oB1"+i).innerHTML= data[0];
+        document.getElementById("oB2"+i).innerHTML= data[1];
+        document.getElementById("oB3"+i).innerHTML= data[2];
+        document.getElementById("oB4"+i).innerHTML= data[3];
+        document.getElementById("oPrice"+i).innerHTML= data[4];
     }
-    document.getElementById("oB1"+i).innerHTML= data[0];
-    document.getElementById("oB2"+i).innerHTML= data[1];
-    document.getElementById("oB3"+i).innerHTML= data[2];
-    document.getElementById("oB4"+i).innerHTML= data[3];
-    document.getElementById("oPrice"+i).innerHTML= data[4];
 }
 
 function countpendOrder(){
