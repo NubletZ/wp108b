@@ -29,10 +29,12 @@ function userLoad(){
     if(user == admin.username){
         document.getElementById("orderButton").style.padding = "12px 8px 12px 8px";
         document.getElementById("orderButton").style.display = "block";
+        document.getElementById("cart").style.display = "none";
     }
     else {
         document.getElementById("orderButton").style.padding = "0";
         document.getElementById("orderButton").style.display = "none";
+        document.getElementById("cart").style.display = "block"
     }
 
     if(user == null) location.href = "index.html"

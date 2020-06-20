@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>FAQ | 306's Book Store</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="myFunction.js"></script>
+        <script type="text/javascript" src="loginFunction.js"></script>
+        <script type="text/javascript" src="userData.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="text-align: center;" onload="userLoad()">
+        <div class="fixNav" id="top">
+            <button class="Menu barMenu" onclick="openMenu()"><b>☰ <span style="font-size:28px">MENU</b></span></button>
+            <a href="faq.html" class="Menu contactMenu">FAQ</a>
+            <a id="cart" href="cart.html" class="Menu contactMenu">
+                <img src="resource/cart.png" style="width:28px">
+            </a>
+            <div id="sideMenu">
+                <div class="rightMenu">
+                    <div class="leftMenu">
+                        <br>
+                        <a href="javascript:void(0)" id="xButton" onclick="closeMenu()">x</a><br><br>
+                        <div style="text-align: center;">
+                            <img src="resource/profilePhoto.png" style="border-radius: 100%; width: 80px;position: relative; padding:10px;">
+                            <p class="menuButton menuUser" id="currentUser">User</p>
+                            <p class="menuButton menuEmail" id="currentEmail">user@email.com</p>
+                            <a href="index.html" class="menuButton menuLogout"><u><b>Log out</b></u></a>
+                        </div>
+                        <a href="home.html" class="menuButton">
+                            <img src="resource/home.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'home')" onmouseout="sideMenu_Out(this, 'home')">
+                        </a>
+                        <a href="shop.html" class="menuButton">
+                            <img src="resource/shop.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'shop')" onmouseout="sideMenu_Out(this, 'shop')">
+                        </a>
+                        <a href="order.html" class="menuButton" id="orderButton">
+                            <img src="resource/order.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'order')" onmouseout="sideMenu_Out(this, 'order')">
+                        </a>
+                        <a href="aboutus.html" class="menuButton">
+                            <img src="resource/aboutUs.png" style="height:60px" onmouseover="sideMenu_Hover(this, 'aboutUs')" onmouseout="sideMenu_Out(this, 'aboutUs')">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="faqText">
+                <div class="testing">
+                    <img src="../PersonalStore (Midterm)/resource/transparent 2.png" class="authorPic">
+                </div>
+                <br><br>
+                <p><b style="font-size:28px">FAQ</b></p>
+                <p>So let’s start the session to ask this yellow lazy chicken!</p>
+            </div>
+        </div>
+
+        <div class="textAbout">
+            <table style="text-align: left; padding: 10px">
+                <tr style="border-width:0px">
+                    <td style="min-width: 80px;">Q : </td>
+                    <td>
+                        what motivate you to make this website?
+                    </td>
+                </tr>
+                <tr>
+                    <td>A : </td>
+                    <td>
+                        hmm, this is my homework so I should finished it ( very motivating! )
+                    </td>
+                </tr>
+                
+                <tr style="border-width:0px">
+                    <td >Q : </td>
+                    <td>
+                        could you share about how you make this website?
+                    </td>
+                </tr>
+                <tr>
+                    <td>A : </td>
+                    <td>
+                        wow, those question.. How should I answer it. Hmm, at first I’ll make the scheme in PowerPoint, 
+                        you can take a look <a href="https://drive.google.com/file/d/1CvE5dbTyc2Jw8kS36rNQ3ansClIFd2Wu/view?usp=sharing" target="_blank" class="clickMe">here</a>. 
+                        After that I browse sooo much to search about how to make some function that I want and write the code. Finish(?)
+
+                    </td>
+                </tr>
+
+                <tr style="border-width:0px">
+                    <td>Q : </td>
+                    <td>
+                        Why you named this website as 360's book store?
+                    </td>
+                </tr>
+                <tr>
+                    <td>A : </td>
+                    <td>
+                        Because majority I got the books from 360 room, so I named my store as 360's Book Store
+                    </td>
+                </tr>
+
+                <tr style="border-width:0px">
+                    <td> Q : </td>
+                    <td>
+                        Why you sell your book bery expensive?
+                    </td>
+                </tr>
+                <tr>
+                    <td> A : </td>
+                    <td>
+                        Hmm, but that's cheaper than the actual price that I paid to buy those books .-.
+                    </td>
+                </tr>
+
+                <tr style="border-width:0px">
+                    <td> Q : </td>
+                    <td>
+                        Why you only sell 4 kinds of book? don't you want to add more?
+                    </td>
+                </tr>
+                <tr>
+                    <td> A : </td>
+                    <td>
+                        Yes ofcourse, but right now my website only used localStorage to store the data. If the data was too big there's a chance to be overflow.
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+        </div>
+    </body>
+</html>
