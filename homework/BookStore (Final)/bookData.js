@@ -51,12 +51,10 @@ function close_productQty(){
 }
 
 //start order data
-function startOrderData(){
-    localStorage.setItem("orderb1", 0);
-    localStorage.setItem("orderb2", 0);
-    localStorage.setItem("orderb3", 0);
-    localStorage.setItem("orderb4", 0);
-}
+if(localStorage.getItem("orderb1") == null) localStorage.setItem("orderb1", 0);
+if(localStorage.getItem("orderb2") == null) localStorage.setItem("orderb2", 0);
+if(localStorage.getItem("orderb3") == null) localStorage.setItem("orderb3", 0);
+if(localStorage.getItem("orderb4") == null) localStorage.setItem("orderb4", 0);
 
 var bookQty, maxQty;
 function orderBook(){
