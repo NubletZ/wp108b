@@ -267,6 +267,7 @@ body {
     margin: 0;
     width: 50px;
     display: inline-block;
+    padding-bottom: 15px;
 }
 
 #orderButton {
@@ -617,4 +618,29 @@ td {
         display: inline-block;
         float: none;
     }
+}
+
+/* FOR ABOUTUS.HTML */
+/* ._306book {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    max-width: 300px;
+} */
+
+.topImg {
+    padding-top: 25px;
+    height: 250px;
+    display: inline-block;
+}
+
+.textAbout2 {
+    font-family: OpenSans;
+    color: black;
+    padding: 10px;
+    margin: 0;
+    display: inline-block;
+    max-width: 700px;
+    font-size: 18px;
+    padding-top: 100px;
 }
