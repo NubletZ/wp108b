@@ -219,5 +219,6 @@ function logOut(){
             localStorage.setItem("stockb"+i, bStock + bcBuy);
         }
     }
+    localStorage.removeItem("currentUser")
     location.href = "index.html";
 }
