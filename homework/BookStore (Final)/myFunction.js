@@ -102,7 +102,7 @@ function totalFunction() {
     for(i = 1; i < 5; i++){
         var price = localStorage.getItem("b" + i).split(':');
         var qty = parseInt(localStorage.getItem("orderb" + i));
-        total += price[1] * qty;
+        total += parseInt(price[1]) * qty;
     }
     document.getElementById('total').innerHTML = "Total : " + total + " NT";
 }
@@ -113,7 +113,7 @@ function checkOut(){
     var p=[];
     for(i = 0; i < 4; i++){
         var id = i+1;
-        p[i] = localStorage.getItem("orderb" + id);
+        p[i] = parseInt(localStorage.getItem("orderb" + id));
     }
     var cUser = localStorage.getItem("currentUser");
     for(i = 0; i < userArr.length; i++){
@@ -125,6 +125,13 @@ function checkOut(){
             userId = i;
             break;
         }
+    }
+    if(localStorage.getItem(userId+"userOrder") != 0 && localStorage.getItem(userId+"userOrder") != null){
+        var shangOrder = localStorage.getItem(userId+"userOrder").split(',');
+        for(i = 0; i < 4; i++){
+            p[i] += parseInt(shangOrder[i]);
+        }
+        total += parseInt(shangOrder[4]);
     }
     localStorage.setItem(userId + "userOrder", p[0] + "," + p[1] + "," + p[2] + "," + p[3] + "," + total);
 
@@ -201,4 +208,16 @@ function deleteoCart(i){
     var row = document.getElementById("tr"+i);
     row.parentNode.removeChild(row);
     countpendOrder();
+}
+
+//log out button function
+function logOut(){
+    for(i = 1; i <= 4; i++){
+        if(localStorage.getItem("orderb"+i) != 0 && localStorage.getItem("orderb"+i) != null){
+            var bStock = parseInt(localStorage.getItem("stockb"+i));
+            var bcBuy = parseInt(localStorage.getItem("orderb"+i)); //bcBuy (book cancle buy) = the quantity of book that the user cancle to order
+            localStorage.setItem("stockb"+i, bStock + bcBuy);
+        }
+    }
+    location.href = "index.html";
 }
