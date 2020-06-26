@@ -4,11 +4,11 @@
 > * 作者 : 魏美亞
 > * 學號 : 110810538
 > * 作品 : 並非100%原創
-## 1. Website Description and Functions
+## 1. 描述網站的功能 Website's Function
 This is an online book store website with POS system. There are two accounts that have been made, user account and admin account. To login as user or admin you can fill the data like this:
-  > USER
-  > * username : user
-  > * password : user
+> USER
+> * username : user
+> * password : user
 
 > ADMIN
 > * username : admin
@@ -20,7 +20,7 @@ If you want to use your own account to log in you can create one and login with 
 ### 1. Home
 > In this pages the user can see a short description about the book store and the latest news about the store
 ### 2. Shop
-> User can see the book description and add it to the shopping cart in this page
+> User can see the product description and add it to the shopping cart
 ### 3. About Us
 > The user can get some information about the offline store location and the contact of the owner
 ### 4. Shopping Cart
@@ -36,7 +36,7 @@ If you want to use your own account to log in you can create one and login with 
 > Here the admin can see the order from all the user, the admin can got information about the username, user e-mail, user address, the books that the user ordered, and the total price for the books. After the books have been sent to the user, admin can click the sent button right at the left side of the username to delete the list from the order list.
 ### 5. FAQ
 
-## 2. References
+## 2. 作品參考來源 References
 
 ### 2.1 Book photo from Pixabay
 <img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/homePart2.png" alt="book shelf"
