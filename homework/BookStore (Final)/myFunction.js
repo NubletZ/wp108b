@@ -19,6 +19,7 @@ function sideMenu_Hover(id, fileName){
 function sideMenu_Out(id, fileName){
     id.setAttribute('src', 'resource/' + fileName + '.png')
 }
+//
 
 // set order Button display or hidden based on the user
 // only admin can access the order
