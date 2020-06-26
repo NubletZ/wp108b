@@ -35,7 +35,7 @@ function show_productQty(bookId){
     var cUser = localStorage.getItem("currentUser");
     if(cUser == admin.username){
         document.getElementById("bookPrice").readOnly = false;
-        document.getElementById("buttonPopup").innerHTML = "Set product & stock";
+        document.getElementById("buttonPopup").innerHTML = "Set price & stock";
         document.getElementById("buttonPopup").onclick = function() { setNewData(bookId); };
         document.getElementById("prdQty").value = localStorage.getItem("stock" + bookId);
     }
