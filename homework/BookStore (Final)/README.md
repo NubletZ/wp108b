@@ -5,6 +5,9 @@
 > * 學號 : 110810538
 > * 作品 : 並非100%原創
 ## 1. 描述網站的功能 Website's Function
+
+
+
 This is an online book store website with POS system. There are two accounts that have been made, user account and admin account. To login as user or admin you can fill the data like this:
 
  USER
@@ -15,7 +18,7 @@ This is an online book store website with POS system. There are two accounts tha
  * username : admin
  * password : admin
 
-If you want to use your own account to log in you can create one and login with your new account
+If you want to use your own account to log in you can create and login with your new account. You can make several account in this website.
 
 <br>
 
@@ -33,7 +36,7 @@ If you want to use your own account to log in you can create one and login with 
 
 <br>
 
-### b. And if you log in as admin you can access some pages differently :
+### b. if you log in as admin you can access some pages differently :
 ### 1. Home
 > Same with user
 ### 2. Shop
