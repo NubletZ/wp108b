@@ -6,7 +6,7 @@
 > * 作品 : 並非100%原創
 ## 1. 描述網站的功能 Website's Function
 
-
+<img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/wScheme.png" alt="website scheme" title="Website Scheme" height="600" />
 
 This is an online book store website with POS system. There are two accounts that have been made, user account and admin account. To login as user or admin you can fill the data like this:
 
