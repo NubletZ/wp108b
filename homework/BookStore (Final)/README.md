@@ -52,12 +52,12 @@ If you want to use your own account to log in you can create and login with your
 
 ## 2. 作品參考來源 References
 
-### 2.1 Book photo from Pixabay
+### 2.1 Book shelf photo from Pixabay
 <img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/homePart2.png" alt="book shelf"
 	title="Book Shelf" height="300" />
 > <a href="https://pixabay.com/users/StartupStockPhotos-690514/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=849797">StartupStockPhotos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=849797">Pixabay</a>. I used this photo in my home page. This photo is free for commercial, please let me know if I've do some mistake and need to remove this picture from my website.
 
-### 2.2 Character from Canva
+### 2.2 Characters from Canva
 <img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/monForHome.png" alt="vector monster" title="Vector Monster" height="200" />
 <img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/forLogSign.png" alt="vector monster" title="Vector Monster" height="200" />
 <img src="https://github.com/NubletZ/wp108b/blob/master/homework/BookStore%20(Final)/resource/profilePhoto.png" alt="vector monster" title="Vector Monster" height="200" />
